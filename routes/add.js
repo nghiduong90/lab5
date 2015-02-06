@@ -1,5 +1,9 @@
 var data = require("../data.json");
 
+exports.view = function(req, res){
+  res.render('add');
+};
+
 exports.addFriend = function(req, res) { 
 	// Your code goes here
 
@@ -18,6 +22,7 @@ exports.addFriend = function(req, res) {
 
 	  console.log(newFriend);
 	  data["friends"].push(newFriend);
+	  res.render('add');
 
 	  	
 }

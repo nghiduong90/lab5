@@ -35,9 +35,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+
+app.get('/add', add.addFriend);
 // Add routes here
 app.get('/', index.view);
-app.get('/add', add.addFriend);
+
 // Example route
 // app.get('/users', user.list);
 

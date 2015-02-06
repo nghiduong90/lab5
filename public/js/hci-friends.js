@@ -23,11 +23,11 @@ function projectClick(e) {
     //$(this).css("background-color", "#7fff00");
 
     var nameTitle = $(this).find("h3").text();
-    var nameHeader = $("h3");
+    var nameHeader = $(".name-change");
     console.log(nameTitle);
-    var changeTitle = $(this).js(anagrammedName(nameTitle));
-    console.log(changeTitle);
-    nameHeader.text(changeTitle);
+    //var changeTitle = $(this).js(anagrammedName(nameTitle));
+    //console.log(changeTitle);
+    nameHeader.text(anagrammedName(nameTitle));
 }
 
 function anagrammedName(name) {
