@@ -3,6 +3,8 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+$("a.name").click(projectClick);
 })
 
 /*
@@ -10,6 +12,22 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+}
+
+function projectClick(e) {
+    // prevent the page from reloading 
+    console.log("clicked clicked!!!!");
+    e.preventDefault();
+    // In an event handler, $(this) refers to
+    // the object that triggered the event
+    //$(this).css("background-color", "#7fff00");
+
+    var nameTitle = $(this).find("h3").text();
+    var nameHeader = $("h3");
+    console.log(nameTitle);
+    var changeTitle = $(this).js(anagrammedName(nameTitle));
+    console.log(changeTitle);
+    nameHeader.text(changeTitle);
 }
 
 function anagrammedName(name) {
